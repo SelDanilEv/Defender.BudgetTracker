@@ -1,4 +1,4 @@
-﻿namespace Defender.ServiceTemplate.Application.Helpers;
+﻿namespace Defender.BudgetTracker.Application.Helpers;
 
 public static class SimpleLogger
 {

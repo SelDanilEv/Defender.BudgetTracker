@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 using Defender.Common.Attributes;
 using Defender.Common.Consts;
-using Defender.ServiceTemplate.Application.Modules.Module.Commands;
+using Defender.BudgetTracker.Application.Modules.Module.Commands;
 
-namespace Defender.ServiceTemplate.WebApi.Controllers.V1;
+namespace Defender.BudgetTracker.WebApi.Controllers.V1;
 
 public class AccountController : BaseApiController
 {

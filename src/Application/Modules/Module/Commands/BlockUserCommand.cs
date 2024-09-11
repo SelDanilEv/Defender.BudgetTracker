@@ -1,11 +1,11 @@
 ﻿using Defender.Common.Errors;
 using Defender.Common.Interfaces;
-using Defender.ServiceTemplate.Application.Common.Interfaces;
+using Defender.BudgetTracker.Application.Common.Interfaces;
 using FluentValidation;
 using Defender.Common.Extension;
 using MediatR;
 
-namespace Defender.ServiceTemplate.Application.Modules.Module.Commands;
+namespace Defender.BudgetTracker.Application.Modules.Module.Commands;
 
 public record ModuleCommand : IRequest<Unit>
 {

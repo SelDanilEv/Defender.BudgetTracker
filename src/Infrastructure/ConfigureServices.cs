@@ -1,16 +1,16 @@
 ﻿using System.Reflection;
 using AutoMapper;
 using Defender.Common.Clients.Identity;
-using Defender.ServiceTemplate.Application.Common.Interfaces.Repositories;
-using Defender.ServiceTemplate.Application.Common.Interfaces.Wrapper;
-using Defender.ServiceTemplate.Application.Configuration.Options;
-using Defender.ServiceTemplate.Infrastructure.Clients.Service;
-using Defender.ServiceTemplate.Infrastructure.Repositories.DomainModels;
+using Defender.BudgetTracker.Application.Common.Interfaces.Repositories;
+using Defender.BudgetTracker.Application.Common.Interfaces.Wrapper;
+using Defender.BudgetTracker.Application.Configuration.Options;
+using Defender.BudgetTracker.Infrastructure.Clients.Service;
+using Defender.BudgetTracker.Infrastructure.Repositories.DomainModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Defender.ServiceTemplate.Infrastructure;
+namespace Defender.BudgetTracker.Infrastructure;
 
 public static class ConfigureServices
 {

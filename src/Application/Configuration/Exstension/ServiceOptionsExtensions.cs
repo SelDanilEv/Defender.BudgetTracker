@@ -1,8 +1,8 @@
-﻿using Defender.ServiceTemplate.Application.Configuration.Options;
+﻿using Defender.BudgetTracker.Application.Configuration.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Defender.ServiceTemplate.Application.Configuration.Extension;
+namespace Defender.BudgetTracker.Application.Configuration.Extension;
 
 public static class ServiceOptionsExtensions
 {

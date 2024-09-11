@@ -1,7 +1,7 @@
-﻿using Defender.ServiceTemplate.Application.Common.Interfaces;
-using Defender.ServiceTemplate.Application.Common.Interfaces.Repositories;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces;
+using Defender.BudgetTracker.Application.Common.Interfaces.Repositories;
 
-namespace Defender.ServiceTemplate.Application.Services;
+namespace Defender.BudgetTracker.Application.Services;
 
 public class Service(
     IDomainModelRepository accountInfoRepository) : IService

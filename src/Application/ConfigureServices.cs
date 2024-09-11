@@ -2,10 +2,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
-using Defender.ServiceTemplate.Application.Common.Interfaces;
-using Defender.ServiceTemplate.Application.Services;
+using Defender.BudgetTracker.Application.Common.Interfaces;
+using Defender.BudgetTracker.Application.Services;
 
-namespace Defender.ServiceTemplate.Application;
+namespace Defender.BudgetTracker.Application;
 
 public static class ConfigureServices
 {

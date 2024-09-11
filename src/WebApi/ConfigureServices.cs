@@ -7,7 +7,7 @@ using Defender.Common.Errors;
 using Defender.Common.Exceptions;
 using Defender.Common.Extension;
 using Defender.Common.Helpers;
-using Defender.ServiceTemplate.Application.Configuration.Extension;
+using Defender.BudgetTracker.Application.Configuration.Extension;
 using FluentValidation.AspNetCore;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,7 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProblemDetailsOptions = Hellang.Middleware.ProblemDetails.ProblemDetailsOptions;
 
-namespace Defender.ServiceTemplate.WebApi;
+namespace Defender.BudgetTracker.WebApi;
 
 public static class ConfigureServices
 {
@@ -90,8 +90,8 @@ public static class ConfigureServices
             options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Version = "v1",
-                Title = "Service Template",
-                Description = "Service template",
+                Title = "Budget Tracker",
+                Description = "This service is for users who want to keep track of their budget.",
             });
 
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()

@@ -1,4 +1,4 @@
-﻿namespace Defender.ServiceTemplate.Application.Configuration.Options;
+﻿namespace Defender.BudgetTracker.Application.Configuration.Options;
 
 public class ServiceOptions
 {

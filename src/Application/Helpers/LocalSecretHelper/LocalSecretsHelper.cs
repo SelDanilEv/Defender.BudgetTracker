@@ -1,7 +1,7 @@
 ﻿using Defender.Common.Enums;
 using Defender.Common.Helpers;
 
-namespace Defender.ServiceTemplate.Application.Helpers.LocalSecretHelper;
+namespace Defender.BudgetTracker.Application.Helpers.LocalSecretHelper;
 
 public class LocalSecretsHelper
 {

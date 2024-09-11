@@ -1,4 +1,4 @@
-﻿namespace Defender.ServiceTemplate.Application.Modules;
+﻿namespace Defender.BudgetTracker.Application.Modules;
 
 public class ValidationConstants
 {
