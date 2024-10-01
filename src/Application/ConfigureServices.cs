@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
-using Defender.BudgetTracker.Application.Common.Interfaces;
 using Defender.BudgetTracker.Application.Services;
+using Defender.BudgetTracker.Application.Common.Interfaces.Services;
 
 namespace Defender.BudgetTracker.Application;
 
@@ -23,7 +23,11 @@ public static class ConfigureServices
 
     private static IServiceCollection RegisterServices(this IServiceCollection services)
     {
-        services.AddTransient<IService, Service>();
+        services.AddTransient<IPositionService, PositionService>();
+        services.AddTransient<IRatesModelService, RatesModelService>();
+        services.AddTransient<IBudgetReviewService, BudgetReviewService>();
+        services.AddTransient<IDiagramSetupService, DiagramSetupService>();
+        services.AddTransient<IGroupService, GroupService>();
 
         return services;
     }

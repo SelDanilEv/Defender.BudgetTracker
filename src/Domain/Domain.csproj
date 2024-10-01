@@ -9,13 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <!--<PackageReference Include="Defender.Common" Version="1.2.26" />-->
-      <PackageReference Include="MediatR" Version="12.4.1" />
-      <PackageReference Include="MongoDB.Bson" Version="2.28.0" />
+        <PackageReference Include="Defender.Common" Version="1.2.30" />
     </ItemGroup>
 
-     <ItemGroup>
-         <ProjectReference Include="..\..\..\Defender.Common\src\Defender.Common\Defender.Common.csproj" />   
-    </ItemGroup> 
+    <!--<ItemGroup>
+        <ProjectReference Include="..\..\..\Defender.Common\src\Defender.Common\Defender.Common.csproj" />
+    </ItemGroup>-->
 
 </Project>

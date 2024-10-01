@@ -15,13 +15,13 @@ public class LocalSecretsHelper
         return await SecretsHelper.GetSecretAsync(secret.ToString());
     }
 
-    public static string GetSecretSync(Secret secret)
+    public static string GetSecretSync(Secret secret, bool useMongo = false)
     {
-        return SecretsHelper.GetSecretSync(secret);
+        return SecretsHelper.GetSecretSync(secret, useMongo);
     }
 
-    public static string GetSecretSync(LocalSecret secret)
+    public static string GetSecretSync(LocalSecret secret, bool useMongo = false)
     {
-        return SecretsHelper.GetSecretSync(secret.ToString());
+        return SecretsHelper.GetSecretSync(secret.ToString(), useMongo);
     }
 }
