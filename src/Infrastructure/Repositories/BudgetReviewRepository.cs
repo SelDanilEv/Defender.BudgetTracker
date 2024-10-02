@@ -20,7 +20,7 @@ public class BudgetReviewRepository : BaseMongoRepository<BudgetReview>, IBudget
         Guid userId)
     {
         var findRequest = FindModelRequest<BudgetReview>
-            .Init(x=> x.UserId, userId)
+            .Init(x => x.UserId, userId)
             .Sort(x => x.Date, SortType.Desc);
 
         var settings = PaginationSettings<BudgetReview>
@@ -29,6 +29,25 @@ public class BudgetReviewRepository : BaseMongoRepository<BudgetReview>, IBudget
         settings.SetupFindOptions(findRequest);
 
         return GetItemsAsync(settings);
+    }
+
+    public async Task<List<BudgetReview>> GetBudgetReviewsAsync(
+        Guid userId, DateOnly startDate, DateOnly endDate)
+    {
+        var findRequest = FindModelRequest<BudgetReview>
+            .Init(x => x.UserId, userId)
+            .And(x => x.Date, startDate, FilterType.Gte)
+            .And(x => x.Date, endDate, FilterType.Lte)
+            .Sort(x => x.Date, SortType.Desc);
+
+        var settings = PaginationSettings<BudgetReview>
+            .WithoutPagination();
+
+        settings.SetupFindOptions(findRequest);
+
+        var pagedResult = await GetItemsAsync(settings);
+
+        return [.. pagedResult.Items];
     }
 
     public Task<BudgetReview> GetBudgetReviewAsync(
@@ -55,26 +74,6 @@ public class BudgetReviewRepository : BaseMongoRepository<BudgetReview>, IBudget
 
         return GetItemAsync(findRequest);
     }
-
-    public async Task<List<BudgetReview>> GetBudgetReviewsAsync(
-        Guid userId, DateOnly startDate, DateOnly endDate)
-    {
-        var findRequest = FindModelRequest<BudgetReview>
-            .Init(x => x.UserId, userId)
-            .And(x => x.Date, startDate, FilterType.Gte)
-            .And(x => x.Date, endDate, FilterType.Lte)
-            .Sort(x => x.Date, SortType.Desc);
-
-        var settings = PaginationSettings<BudgetReview>
-            .WithoutPagination();
-
-        settings.SetupFindOptions(findRequest);
-
-        var pagedResult = await GetItemsAsync(settings);
-
-        return [.. pagedResult.Items];
-    }
-
 
     public Task<BudgetReview> UpsertBudgetReviewAsync(BudgetReview review)
     {

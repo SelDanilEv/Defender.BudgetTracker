@@ -10,6 +10,7 @@ using Defender.Common.DB.Pagination;
 using Defender.BudgetTracker.Application.Modules.BudgetReviews.Commands;
 using System;
 using Defender.BudgetTracker.Application.DTOs;
+using System.Collections.Generic;
 
 
 namespace WebApi.Controllers.V1;
@@ -27,6 +28,16 @@ public class BudgetReviewController : BaseApiController
     public async Task<PagedResult<BudgetReviewDto>> GetBudgetReviewsAsync([FromQuery] GetBudgetReviewsQuery query)
     {
         return await ProcessApiCallAsync<GetBudgetReviewsQuery, PagedResult<BudgetReviewDto>>(query);
+    }
+
+    [HttpGet("by-date-range")]
+    [Auth(Roles.User)]
+    [ProducesResponseType(typeof(List<BudgetReviewDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+    public async Task<List<BudgetReviewDto>> GetBudgetReviewsByDateRangeAsync(
+        [FromQuery] GetBudgetReviewsByDateRangeQuery query)
+    {
+        return await ProcessApiCallAsync<GetBudgetReviewsByDateRangeQuery, List<BudgetReviewDto>>(query);
     }
 
     [HttpGet("template")]
