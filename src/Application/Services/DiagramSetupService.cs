@@ -10,10 +10,15 @@ public class DiagramSetupService(
     IDiagramSetupRepository diagramSetupRepository,
     ICurrentAccountAccessor currentAccountAccessor) : IDiagramSetupService
 {
-    public Task<DiagramSetup> GetCurrentUserDiagramSetupAsync()
+    public async Task<DiagramSetup> GetCurrentUserDiagramSetupAsync()
     {
-        return diagramSetupRepository
+        var diagramSetup = await diagramSetupRepository
             .GetDiagramSetupByUserIdAsync(currentAccountAccessor.GetAccountId());
+
+        if (diagramSetup is null)
+            diagramSetup = await UpdateDiagramSetupAsync(UpdateMainDiagramSetupRequest.DefaultRequest);
+
+        return diagramSetup;
     }
 
     public Task<DiagramSetup> UpdateDiagramSetupAsync(UpdateMainDiagramSetupRequest request)
