@@ -12,6 +12,7 @@ public class BudgetReview : IUserOwnedModel, IBaseModel
     [BsonId]
     [BsonRepresentation(BsonType.String)]
     public Guid Id { get; set; }
+    [BsonGuidRepresentation(GuidRepresentation.CSharpLegacy)]
     public Guid UserId { get; set; }
 
     public DateOnly Date { get; set; }

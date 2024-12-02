@@ -10,5 +10,6 @@ public class Position : BasePosition, IUserOwnedModel, IBaseModel
     [BsonId]
     [BsonRepresentation(BsonType.String)]
     public Guid Id { get; set; }
+    [BsonGuidRepresentation(GuidRepresentation.CSharpLegacy)]
     public Guid UserId { get; set; }
 }

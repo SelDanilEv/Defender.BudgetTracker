@@ -11,6 +11,7 @@ public class DiagramSetup : IUserOwnedModel, IBaseModel
     [BsonId]
     [BsonRepresentation(BsonType.String)]
     public Guid Id { get; set; }
+    [BsonGuidRepresentation(GuidRepresentation.CSharpLegacy)]
     public Guid UserId { get; set; }
 
     public DateOnly EndDate { get; set; }
