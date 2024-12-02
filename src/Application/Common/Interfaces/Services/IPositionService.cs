@@ -1,5 +1,4 @@
-﻿using Defender.BudgetTracker.Application.Models.Groups;
-using Defender.BudgetTracker.Application.Models.Positions;
+﻿using Defender.BudgetTracker.Application.Models.Positions;
 using Defender.BudgetTracker.Domain.Entities.Position;
 using Defender.Common.DB.Pagination;
 

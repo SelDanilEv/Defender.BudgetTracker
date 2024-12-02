@@ -1,10 +1,10 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using Defender.BudgetTracker.Application.Models.BudgetReview;
+using Defender.BudgetTracker.Domain.Entities.Reviews;
 using Defender.Common.Errors;
 using Defender.Common.Extension;
-using Defender.BudgetTracker.Domain.Entities.Reviews;
-using Defender.BudgetTracker.Application.Models.BudgetReview;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using FluentValidation;
+using MediatR;
 
 namespace Defender.BudgetTracker.Application.Modules.BudgetReviews.Commands;
 
@@ -17,7 +17,7 @@ public sealed class PublishBudgetReviewCommandValidator : AbstractValidator<Publ
     public PublishBudgetReviewCommandValidator()
     {
         RuleFor(x => x.ReviewedPositions)
-            .Must(x=> x.Count > 0)
+            .Must(x => x.Count > 0)
             .WithMessage(ErrorCode.VL_BTS_NumberOfPositionsMustBePositive);
 
     }

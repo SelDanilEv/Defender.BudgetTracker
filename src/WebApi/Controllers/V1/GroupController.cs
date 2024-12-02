@@ -1,15 +1,15 @@
-﻿using AutoMapper;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
+﻿using System;
 using System.Threading.Tasks;
+using AutoMapper;
+using Defender.BudgetTracker.Application.Modules.Groups.Commands;
+using Defender.BudgetTracker.Application.Modules.Groups.Queries;
+using Defender.BudgetTracker.Domain.Entities.Groups;
 using Defender.Common.Attributes;
 using Defender.Common.Consts;
-using Defender.BudgetTracker.Application.Modules.Groups.Queries;
 using Defender.Common.DB.Pagination;
-using Defender.BudgetTracker.Application.Modules.Groups.Commands;
-using System;
-using Defender.BudgetTracker.Domain.Entities.Groups;
+using MediatR;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers.V1;
 

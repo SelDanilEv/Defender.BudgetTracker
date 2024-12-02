@@ -1,7 +1,7 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
 using Defender.BudgetTracker.Domain.Entities.Reviews;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using FluentValidation;
+using MediatR;
 
 namespace Defender.BudgetTracker.Application.Modules.BudgetReviews.Queries;
 
@@ -11,7 +11,7 @@ public record GetBudgetReviewsByDateRangeQuery : IRequest<List<BudgetReview>>
     public DateOnly EndDate { get; set; }
 };
 
-public sealed class GetBudgetReviewsByDateRangeQueryValidator 
+public sealed class GetBudgetReviewsByDateRangeQueryValidator
     : AbstractValidator<GetBudgetReviewsByDateRangeQuery>
 {
     public GetBudgetReviewsByDateRangeQueryValidator()
@@ -29,6 +29,6 @@ public sealed class GetBudgetReviewsByDateRangeQueryHandler(
         CancellationToken cancellationToken)
     {
         return budgetReviewService
-            .GetCurrentUserBudgetReviewsAsync(request.StartDate,request.EndDate);
+            .GetCurrentUserBudgetReviewsAsync(request.StartDate, request.EndDate);
     }
 }

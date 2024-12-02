@@ -1,13 +1,13 @@
-﻿using Defender.BudgetTracker.Application.Common.Interfaces.Wrapper;
-using Defender.BudgetTracker.Domain.Enums;
-using Defender.BudgetTracker.Application.Configuration.Options;
-using Microsoft.Extensions.Options;
-using System.Text.Json;
-using Defender.Common.Exceptions;
-using Defender.Common.Errors;
+﻿using System.Text.Json;
 using AutoMapper;
-using Defender.BudgetTracker.Infrastructure.Models;
+using Defender.BudgetTracker.Application.Common.Interfaces.Wrapper;
+using Defender.BudgetTracker.Application.Configuration.Options;
 using Defender.BudgetTracker.Domain.Entities.Rates;
+using Defender.BudgetTracker.Domain.Enums;
+using Defender.BudgetTracker.Infrastructure.Models;
+using Defender.Common.Errors;
+using Defender.Common.Exceptions;
+using Microsoft.Extensions.Options;
 
 namespace Defender.BudgetTracker.Infrastructure.Clients.ExchangeRatesApi;
 

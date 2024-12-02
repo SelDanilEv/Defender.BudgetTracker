@@ -1,8 +1,8 @@
-﻿using MongoDB.Bson.Serialization.Serializers;
-using MongoDB.Bson.Serialization;
-using Defender.BudgetTracker.Domain.Enums;
-using MongoDB.Bson.IO;
+﻿using Defender.BudgetTracker.Domain.Enums;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 
 namespace Defender.BudgetTracker.Domain.Serialization;
 

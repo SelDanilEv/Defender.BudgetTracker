@@ -2,13 +2,13 @@
 using Defender.BudgetTracker.Application.Common.Interfaces.Repositories;
 using Defender.BudgetTracker.Application.Common.Interfaces.Wrapper;
 using Defender.BudgetTracker.Application.Configuration.Options;
+using Defender.BudgetTracker.Domain.Serialization;
+using Defender.BudgetTracker.Infrastructure.Clients.ExchangeRatesApi;
+using Defender.BudgetTracker.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Defender.BudgetTracker.Infrastructure.Repositories;
-using Defender.BudgetTracker.Infrastructure.Clients.ExchangeRatesApi;
 using MongoDB.Bson.Serialization;
-using Defender.BudgetTracker.Domain.Serialization;
 
 namespace Defender.BudgetTracker.Infrastructure;
 
@@ -48,7 +48,7 @@ public static class ConfigureServices
     }
 
     private static IServiceCollection RegisterApiClients(
-        this IServiceCollection services, 
+        this IServiceCollection services,
         IConfiguration configuration)
     {
         //services.RegisterIdentityClient(

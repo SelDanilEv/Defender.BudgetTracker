@@ -1,11 +1,11 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
 using Defender.BudgetTracker.Application.Models.Positions;
 using Defender.BudgetTracker.Domain.Entities.Position;
 using Defender.BudgetTracker.Domain.Enums;
 using Defender.Common.Errors;
 using Defender.Common.Extension;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using FluentValidation;
+using MediatR;
 
 namespace Defender.BudgetTracker.Application.Modules.Positions.Commands;
 

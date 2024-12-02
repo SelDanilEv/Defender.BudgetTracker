@@ -1,10 +1,10 @@
-﻿using FluentValidation;
-using MediatR;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using Defender.BudgetTracker.Application.Models.DiagramSetups;
 using Defender.BudgetTracker.Domain.Entities.DiagramSetup;
 using Defender.Common.Errors;
 using Defender.Common.Extension;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
-using Defender.BudgetTracker.Application.Models.DiagramSetups;
+using FluentValidation;
+using MediatR;
 
 namespace Defender.BudgetTracker.Application.Modules.DiagramSetups.Commands;
 

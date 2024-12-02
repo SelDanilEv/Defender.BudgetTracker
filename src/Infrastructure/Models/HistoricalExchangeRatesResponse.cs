@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Defender.BudgetTracker.Domain.Enums;
 
 namespace Defender.BudgetTracker.Infrastructure.Models;
 

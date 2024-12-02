@@ -1,13 +1,13 @@
-﻿using AutoMapper;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using Defender.Common.Attributes;
-using Defender.Common.Consts;
+﻿using System.Threading.Tasks;
+using AutoMapper;
+using Defender.BudgetTracker.Application.Modules.DiagramSetups.Commands;
 using Defender.BudgetTracker.Application.Modules.DiagramSetups.Queries;
 using Defender.BudgetTracker.Domain.Entities.DiagramSetup;
-using Defender.BudgetTracker.Application.Modules.DiagramSetups.Commands;
+using Defender.Common.Attributes;
+using Defender.Common.Consts;
+using MediatR;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers.V1;
 

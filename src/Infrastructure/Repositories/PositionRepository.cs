@@ -1,10 +1,10 @@
-﻿using Defender.Common.Configuration.Options;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Repositories;
+using Defender.BudgetTracker.Domain.Entities.Position;
+using Defender.Common.Configuration.Options;
+using Defender.Common.DB.Model;
+using Defender.Common.DB.Pagination;
 using Defender.Common.DB.Repositories;
 using Microsoft.Extensions.Options;
-using Defender.Common.DB.Model;
-using Defender.BudgetTracker.Domain.Entities.Position;
-using Defender.BudgetTracker.Application.Common.Interfaces.Repositories;
-using Defender.Common.DB.Pagination;
 
 namespace Defender.BudgetTracker.Infrastructure.Repositories;
 

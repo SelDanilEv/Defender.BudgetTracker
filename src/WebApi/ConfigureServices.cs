@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Text;
 using System.Text.Json.Serialization;
+using Defender.BudgetTracker.Application.Configuration.Exstension;
 using Defender.Common.Enums;
 using Defender.Common.Errors;
 using Defender.Common.Exceptions;
@@ -18,7 +19,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ProblemDetailsOptions = Hellang.Middleware.ProblemDetails.ProblemDetailsOptions;
-using Defender.BudgetTracker.Application.Configuration.Exstension;
 
 namespace WebApi;
 

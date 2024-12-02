@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
+using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using Defender.BudgetTracker.Application.Services;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
-using Defender.BudgetTracker.Application.Services;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Defender.BudgetTracker.Application;
 

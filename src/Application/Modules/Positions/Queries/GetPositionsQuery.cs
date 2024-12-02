@@ -1,8 +1,8 @@
-﻿using Defender.Common.DB.Pagination;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using Defender.BudgetTracker.Domain.Entities.Position;
+using Defender.Common.DB.Pagination;
 using FluentValidation;
 using MediatR;
-using Defender.BudgetTracker.Domain.Entities.Position;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
 
 namespace Defender.BudgetTracker.Application.Modules.Positions.Queries;
 

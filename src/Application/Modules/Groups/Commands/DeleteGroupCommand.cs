@@ -1,6 +1,6 @@
-﻿using FluentValidation;
+﻿using Defender.BudgetTracker.Application.Common.Interfaces.Services;
+using FluentValidation;
 using MediatR;
-using Defender.BudgetTracker.Application.Common.Interfaces.Services;
 
 namespace Defender.BudgetTracker.Application.Modules.Groups.Commands;
 
